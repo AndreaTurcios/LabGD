@@ -2,7 +2,7 @@
 require_once "config/conexion.php";
 if (isset($_POST)) {
     if ($_POST['action'] == 'buscar') {
-        $array['datos'] = array();
+        $array['datos'] = array(); 
         $total = 0;
         for ($i=0; $i < count($_POST['data']); $i++) { 
             $id = $_POST['data'][$i]['id'];
