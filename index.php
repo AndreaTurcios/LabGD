@@ -24,12 +24,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <a href="#" class="nav-link text-info" category="all">Todo</a>
+                    <ul class="navbar-nav mx-auto">
+                        <a style= "font-family:Verdana,Arial,Helvetica" href="#" class="nav-link text-info" category="all">Todo</a>
                         <?php
                         $query = mysqli_query($conexion, "SELECT * FROM categorias");
                         while ($data = mysqli_fetch_assoc($query)) { ?>
-                            <a href="#" class="nav-link" category="<?php echo $data['categoria']; ?>"><?php echo $data['categoria']; ?></a>
+                            <a style= "font-family:Verdana,Arial,Helvetica" href="#" class="nav-link" category="<?php echo $data['categoria']; ?>"><?php echo $data['categoria']; ?></a>
                         <?php } ?>
                     </ul>
                 </div>
@@ -38,13 +38,43 @@
     </div>
     <!-- Header-->
     <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Laptops G&D</h1>
-                <p class="lead fw-normal text-white-50 mb-0">Somos una empresa con más de 22 años de experiencia. Contamos con centro de venta de Repuestos y accesorios para laptop.</p>
-            </div>
-        </div>
-    </header>
+    <div class="container px-4 px-lg-5">
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/img/20211212082759.jpg" class="d-block w-100" alt="imagen 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Laptops G&D</h2>
+        <h3>Somos una empresa con más de 22 años de experiencia. Contamos con centro de venta de Repuestos y accesorios para laptop.</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/20220255.jpg" class="d-block w-100" alt="imagen 2">
+      <div class="carousel-caption d-none d-md-block">
+      <h2>Laptops G&D</h2>
+        <h3>Somos una empresa con más de 22 años de experiencia. Contamos con centro de venta de Repuestos y accesorios para laptop.</h3>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/img/20190255.jpg" class="d-block w-100" alt="imagen 3">
+      <div class="carousel-caption d-none d-md-block">
+      <h2>Laptops G&D</h2>
+        <h3>Somos una empresa con más de 22 años de experiencia. Contamos con centro de venta de Repuestos y accesorios para laptop.</h3>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>      
+        </header>
     <section class="py-5">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
