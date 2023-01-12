@@ -58,6 +58,7 @@ bottom: 20px;
 right: 20px;
 }
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 600px) {
     .wa {
@@ -72,3 +73,5 @@ right: 20px;
 .mensajes svg{
     margin-bottom: 3px;
 }
+=======
+>>>>>>> 82d6a2b8cad01bf8022f0e35628a691c45c875df
