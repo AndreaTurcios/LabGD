@@ -21,8 +21,8 @@ require_once "config/config.php";
 
 <body>
     <!-- Navigation-->
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./">Laptops G&D</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,9 +33,10 @@ require_once "config/config.php";
     </div>
     <!-- Header-->
     <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
+        <div class="container px-4 px-lg-2 my-3">
             <div class="text-center text-white">
                 <h1 class="display-4 fw-bolder">Carrito</h1>
+                <hr>
                 <p class="lead fw-normal text-white-50 mb-0">Tus Productos Agregados.</p>
             </div>
         </div>
@@ -72,7 +73,7 @@ require_once "config/config.php";
         </div>
     </section>
     <!-- Footer-->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark fixed-bottom">
         <div class="container">
             <a href="https://github.com/AndreaTurcios" style="color:#FFFFFF;">
                 <script type="text/javascript">
