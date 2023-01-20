@@ -4,14 +4,10 @@ const ENDPOINT_ASIGNATURA = '../../app/api/asignatura.php?action=readAll';
 const ENDPOINT_ESTADO_LIBRO = '../../app/api/estado_libro.php?action=readAll';
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Se llama a la función que obtiene los registros para llenar la tabla. Se encuentra en el archivo components.js
     fillSelect(ENDPOINT_ASIGNATURA,'asignatura',null)
     fillSelect(ENDPOINT_ESTADO_LIBRO,'estadolibro',null)
     readRows(API_LIBROS);
-    //readRows(ENDPOINT_TIPO);
 });
-
-// Función para llenar la tabla con los datos de los registros. Se manda a llamar en la función readRows().
 function fillTable(dataset) { 
     let content = '';
     // Se recorre el conjunto de registros (dataset) fila por fila a través del objeto row.
@@ -20,13 +16,15 @@ function fillTable(dataset) {
         // Se crean y concatenan las filas de la tabla con los datos de cada registro. 
         content += ` 
             <tr>       
-                <td>${row.id_libro}</td>
-                <td><a href="../dashboard/unidades/${row.nombre_libro}.php">${row.nombre_libro}</a></td>
-                <td>${row.numero_paginas}</td> 
-                <td>${row.asignatura}</td>
-                <td>${row.estado_libro}</td>  
+                <td>${row.id}</td>
+                <td>${row.nombre}</td> 
+                <td>${row.descripcion}</td>
+                <td>${row.precio_normal}</td>  
+                <td>${row.precio_rebajado}</td>  
+                <td>${row.cantidad}</td> 
+                <td>${row.imagen}</td> 
+                <td>${row.id_categoria}</td> 
                 <td>
-                    <a href="../../app/reports/libro.php?id=${row.id_libro}"class="btn" data-tooltip="Reporte">Reporte</a> /
                     <a href="#" onclick="openUpdateDialog(${row.id_libro})"class="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</a> /
                     <a href="#" onclick="openDeleteDialog(${row.id_libro})"class="btn">Eliminar</a>
                 </td>

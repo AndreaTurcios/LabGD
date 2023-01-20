@@ -119,47 +119,9 @@ class Productos extends Validator
 
     public function readAll()
     {
-        $sql = 'SELECT grup.NOMBRE as grupoNombre, subg.NOMBRE as subgrupoNombre,  ivp.productoservicio as productoservicio, ivp.codigo as codigo, ivp.descripcion as descripcion, ivp.PRECIOLISTA as preciolista, ivp.preciolistaconiva as preciolistaconiva, ivp.HABILITADO as habilitado, ivp.productoid, subg.subgrupoid
-        FROM invproductos ivp
-        inner join invsubgrupos subg ON subg.SUBGRUPOID  = ivp.SUBGRUPOID 
-        inner join invgrupos grup on subg.GRUPOID  = grup.GRUPOID 
-        ORDER BY productoid desc ';
+        $sql = 'SELECT id, nombre, descripcion, precio_normal, precio_rebajado, cantidad, imagen, id_categoria from productos
+        ORDER BY id desc ';
         $params = null;
         return Database::getRows($sql, $params);
-    }
-
-    public function updateRow()
-    {
-        $sql = 'UPDATE invproductos 
-        SET subgrupoid = ?, productoservicio = ?, codigo = ?, descripcion = ?, 
-        preciolista = ?, preciolistaconiva = ? , habilitado = 1
-        WHERE productoid = ?';
-        $params = array($this->subgrupoid, $this->productoservicio, $this->codigo, $this->descripcion, $this->preciolista, $this->preciolistaconiva, $this->productoid);
-        return Database::executeRow($sql, $params);
-    }
-
-    public function createRow()
-    {
-        $sql = 'INSERT INTO invproductos(productoid, subgrupoid, productoservicio, codigo, descripcion,preciolista, preciolistaconiva,habilitado)  
-        values (lastIdProducto(),?,?,?,?,?,?,1)';
-        $params = array($this->subgrupoid, $this->productoservicio, $this->codigo, $this->descripcion, $this->preciolista, $this->preciolistaconiva);
-        return Database::executeRow($sql, $params);
-    }
-
-    public function deleteRow()
-    {
-        $sql = 'DELETE FROM invproductos
-                WHERE productoid = ?';
-        $params = array($this->productoid);
-        return Database::executeRow($sql, $params);
-    }
-
-    public function readOne()
-    {
-        $sql = 'SELECT productoid, subgrupoid, productoservicio, codigo, descripcion,preciolista, preciolistaconiva
-        FROM invproductos
-        WHERE productoid = ?';
-        $params = array($this->productoid);
-        return Database::getRow($sql, $params);
     }
 }

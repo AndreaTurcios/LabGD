@@ -47,10 +47,13 @@ Dashboard_Page::headerTemplate('Control');
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">N°</th>
-                            <th scope="col">Nombre libro</th>
-                            <th scope="col">N° Páginas</th>
-                            <th scope="col">Asignatura</th>
-                            <th scope="col">Estado libro</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Precio rebajado</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Categoria</th>
                             <th scope="col">Controlador</th>
                         </tr>
                     </thead>
@@ -167,5 +170,5 @@ Dashboard_Page::headerTemplate('Control');
 </section>
 <?php
 // Se imprime la plantilla del pie enviando el nombre del controlador para la página web.
-Dashboard_Page::footerTemplate('libros.js');
+Dashboard_Page::footerTemplate('productos.js');
 ?>
