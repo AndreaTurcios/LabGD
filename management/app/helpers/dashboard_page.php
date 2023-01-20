@@ -1,16 +1,6 @@
 <?php
-/*
-*	Clase para definir las plantillas de las páginas web
-*/
 class Dashboard_Page
 {
-  /*
-    *   Método para imprimir la plantilla del encabezado.
-    *
-    *   Parámetros: $title (título de la página web y del contenido principal).
-    *
-    *   Retorno: ninguno.
-    */
   public static function headerTemplate($title)
   {
     print('
@@ -31,21 +21,12 @@ class Dashboard_Page
         </head>
         <body>  
     ');
-    // Se comprueba si existe una sesión de administrador para mostrar el menú de opciones, de lo contrario se muestra un menú vacío.
     $filename = basename($_SERVER['PHP_SELF']);
       print('
   <nav>
           <div class="menu">
               <ul>
-                   <li><a href="../dashboard/principal.php"><img src="resources/img/logo_sinai.png" width="200" height="60" class="top-center"></a></li>
-              </ul>
-              <ul>
-                  <li></li><li></li><li></li><li></li><li></li>
-                  <li></li><li></li><li></li><li></li><li></li>
-                  <li></li><li></li><li></li><li></li><li></li>
-                  <li></li><li></li><li></li><li></li><li></li>
-                  <li></li><li></li>
-                  <li><a href="../dashboard/login.php">Login</a></li>
+                   <li><a href="../management/control.php"><img src="resources/img/logo_sinai.png" width="200" height="60" class="top-center"></a></li>
               </ul>
           </div>
       </nav>
@@ -68,7 +49,6 @@ class Dashboard_Page
          <script type="text/javascript" src="resources/js/vanilla-dataTables.min.js"></script>
          <script type="text/javascript" src="resources/js/sweetalert.min.js"></script>
          <script type="text/javascript" src="app/helpers/components.js"></script>
-         <script type="text/javascript" src="app/controllers/account.js"></script>
          <script type="text/javascript" src="app/controllers/' . $controller . '"></script>
             ');
 
@@ -80,22 +60,8 @@ class Dashboard_Page
           <div class="row">
             <div class="col-sm-12 col-md-6">
               <h6>Sobre nosotros</h6>
-              <p class="text-justify">MonteSinai es una gran ventana a la formacion en todos los sentidos,
-              nuestros libros le ayudan en la aventura del saber, del conocer, de convivir y descubrir. 
-              Es un recurso didáctico elaborado con la intención de facilitar los procesos de enseñanza y aprendizaje. 
-              Contamos con un portafolio de libros de texto curriculares y no curriculares</p>
+              <p class="text-justify">Laptops G&D</p>
             </div>
-
-      <div class="col-xs-6 col-md-3">
-        <h6>Recursos para docentes: </h6>
-        <ul class="footer-links">
-          <li><a href="#">Inglés</a></li>
-          <li><a href="#">Moral, urbanidad y civica</a></li>
-          <li><a href="#">Ciencias Salud y Medio Ambiente</a></li>
-          <li><a href="#">Lenguaje y Literatura</a></li>
-          <li><a href="#">Estudios sociales</a></li>
-        </ul>
-      </div>
 
       <div class="col-xs-6 col-md-3">
         <h6>CONTACTO</h6>
@@ -118,7 +84,7 @@ class Dashboard_Page
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12">
         <ul class="social-icons">
-          <li><a class="facebook" href="https://www.facebook.com/coleccionmontesinai/"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="facebook" href="https://www.facebook.com/andreaaturcios/"><i class="fa fa-facebook"></i></a></li>
           <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
           <li><a class="linkedin" href="https://sv.linkedin.com/in/andrea-turcios-bb8932219"><i class="fa fa-linkedin"></i></a></li>   
         </ul>

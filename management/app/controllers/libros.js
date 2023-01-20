@@ -1,5 +1,5 @@
 // Constante para establecer la ruta y parámetros de comunicación con la API.
-const API_LIBROS = '../../app/api/libros.php?action=';
+const API_LIBROS = '../../app/api/productos.php?action=';
 const ENDPOINT_ASIGNATURA = '../../app/api/asignatura.php?action=readAll';
 const ENDPOINT_ESTADO_LIBRO = '../../app/api/estado_libro.php?action=readAll';
 

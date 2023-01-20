@@ -2,7 +2,7 @@
 const API_EMPLEADOS = '../../app/api/usuarios.php?action=';
 const ENDPOINT_TIPO = '../../app/api/tipo_empleado.php?action=readAll';
 const ENDPOINT_ESTADO_EMPLEADO = '../../app/api/estado_empleado.php?action=readAll';
-const ENDPOINT_LIBRO = '../../app/api/libros.php?action=readAll';
+const ENDPOINT_LIBRO = '../../app/api/productos.php?action=readAll';
 
 document.addEventListener('DOMContentLoaded', function () {
     // Se llama a la función que obtiene los registros para llenar la tabla. Se encuentra en el archivo components.js
@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     readRows(API_EMPLEADOS);
     //readRows(ENDPOINT_TIPO);
 });
-
-// Función para llenar la tabla con los datos de los registros. Se manda a llamar en la función readRows().
 function fillTable(dataset) { 
     let content = '';
     // Se recorre el conjunto de registros (dataset) fila por fila a través del objeto row.

@@ -107,7 +107,7 @@ document.getElementById('session-form').addEventListener('submit', function (eve
                             audio = new Audio(`../../resources/audio/welcome.mp3`)
                             audio.play()
                     }
-                    sweetAlert(1, response.message, 'principal.php');
+                    sweetAlert(1, response.message, 'control.php');
                 } else {
                     sweetAlert(2, response.exception, 'login.php');
                 }

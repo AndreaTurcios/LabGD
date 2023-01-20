@@ -111,7 +111,7 @@
     <div class="container-fluid text-center py-5 px-5 mensajes tr">
         <div class="row justify-content-center">
             <div class="col">
-                <h3>
+                <h3 style="color: white;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                     <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
                     <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
@@ -120,7 +120,7 @@
                 </h3>
             </div>
             <div class="col">
-                <h3>
+                <h3 style="color: white;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                     <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
                     <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
@@ -129,7 +129,7 @@
                 </h3>
             </div>
             <div class="col">
-                <h3>
+                <h3 style="color: white;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                     <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
                     <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
@@ -138,10 +138,6 @@
                 </h3>
             </div>
         </div>
-    </div>
-
-    <div class="sepCat" id="sep">
-        <h1>Catálogo de productos.</h1>
     </div>
 
     <section class="py-5">
@@ -201,6 +197,58 @@
         <a href="#" class="btn btn-light btn-lg" role="button" aria-disabled="true">Regresar arriba</a>
     </div>
 
+    <a href="https://front.codes/" class="logo" target="_blank">
+		<img src="https://assets.codepen.io/1462889/fcb.png" alt="">
+	</a>	
+
+	<div class="section over-hide">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section text-center py-5 py-md-0">
+			          	<input class="pricing" type="checkbox" id="pricing" name="pricing"/>
+			          	<label for="pricing"><span class="block-diff"> Mantenimiento <span class="float-right">camping</span></span></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="pricing-wrap">
+                                    <h4 class="mb-5">Mantenimiento</h4>
+										<h2 class="mb-2"><sup>$</sup>40 - 50<sup>USD</sup></h2>
+										<p class="mb-4">Precios economicos</p>
+										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+										<p class="mb-4">San Salvador</p>
+										<a href="#0" class="link">Agenda cita</a>
+										<div class="img-wrap img-1">
+											<img src="https://cdn-icons-png.flaticon.com/512/2593/2593341.png" alt="">
+										</div>
+										<div class="img-wrap img-6">
+											<img src="https://www.pngall.com/wp-content/uploads/10/Tools-No-Background.png" alt="">
+										</div>
+			      					</div>
+			      				</div>
+								<div class="card-back">
+									<div class="pricing-wrap">
+										<h4 class="mb-5">Reparacion de equipos</h4>
+										<h2 class="mb-2"><sup>$</sup>40 - 50<sup>USD</sup></h2>
+										<p class="mb-4">Precios economicos</p>
+										<p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
+										<p class="mb-4">San Salvador</p>
+										<a href="#0" class="link">Agenda cita</a>
+										<div class="img-wrap img-4">
+											<img src="https://www.pngkey.com/png/full/905-9057780_why-the-msp-world-needs-ecsm-mantenimiento-reparacion.png" alt="">
+										</div>
+										<div class="img-wrap img-7">
+											<img src="https://cdn-icons-png.flaticon.com/512/1213/1213001.png" alt="">
+										</div>
+			      					</div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</div>
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">

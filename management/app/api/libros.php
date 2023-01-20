@@ -1,7 +1,7 @@
 <?php
 require_once('../helpers/database.php');
 require_once('../helpers/validator.php');
-require_once('../models/libros.php');
+require_once('../models/productos.php');
 // En estos if lo que indicaremos es la acción a realizar, si es search, create, update, etc...
 
 if (isset($_GET['action'])) {
