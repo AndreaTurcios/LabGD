@@ -83,7 +83,7 @@ document.getElementById('update-form').addEventListener('submit', function (even
 
 function openDeleteDialog(id) {
     const data = new FormData();
-    data.append('productoid', id);
+    data.append('id', id);
     confirmDelete(API_PRODUCTOS, data);
 }
 

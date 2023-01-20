@@ -141,7 +141,7 @@ class Productos extends Validator
 
     public function createRow()
     {
-        $sql = 'INSERT INTO invproductos(productoid, subgrupoid, productoservicio, codigo, descripcion,preciolista, preciolistaconiva,habilitado)  
+        $sql = 'INSERT INTO productos(productoid, subgrupoid, productoservicio, codigo, descripcion,preciolista, preciolistaconiva,habilitado)  
         values (lastIdProducto(),?,?,?,?,?,?,1)';
         $params = array($this->subgrupoid, $this->productoservicio, $this->codigo, $this->descripcion, $this->preciolista, $this->preciolistaconiva);
         return Database::executeRow($sql, $params);
@@ -149,17 +149,17 @@ class Productos extends Validator
 
     public function deleteRow()
     {
-        $sql = 'DELETE FROM invproductos
-                WHERE productoid = ?';
+        $sql = 'DELETE FROM productos
+                WHERE id = ?';
         $params = array($this->productoid);
         return Database::executeRow($sql, $params);
     }
 
     public function readOne()
     {
-        $sql = 'SELECT productoid, subgrupoid, productoservicio, codigo, descripcion,preciolista, preciolistaconiva
-        FROM invproductos
-        WHERE productoid = ?';
+        $sql = 'SELECT id, nombre, descripcion, precio_normal, precio_rebajado, cantidad, imagen, id_categoria 
+        FROM productos
+        WHERE id = ?';
         $params = array($this->productoid);
         return Database::getRow($sql, $params);
     }

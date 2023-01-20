@@ -69,48 +69,55 @@ Dashboard_Page::headerTemplate('Productos');
                                             <div class="modal-body">
                                                 <div class="container">
                                                     <div class="form-group">
-                                                        <label for="serviciopro">Servicio</label>
+                                                        <label for="serviciopro">Nombre</label>
                                                         <input type="text" class="form-control" id="serviciopro"
-                                                            name="serviciopro" placeholder="Nombre servicio"
+                                                            name="nombrepro" placeholder="Nombre producto"
                                                             pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required
                                                             maxlength="1" autocomplete="off" />
                                                     </div>
                                                     <br>
                                                     <div class="form-group">
-                                                        <label for="codigopro">Codigo</label>
-                                                        <input type="text" class="form-control" id="codigopro"
-                                                            name="codigopro" placeholder="Codigo"
+                                                        <label for="descripcionpro">Descripcion</label>
+                                                        <input type="text" class="form-control" id="descripcionpro"
+                                                            name="descripcionpro" placeholder="Descripcion"
                                                             required
                                                             minlength="3" maxlength="50" autocomplete="off" />
                                                     </div>
                                                     <br>
                                                     <div class="form-group">
-                                                        <label for="descripcionpro">Descripcion</label>
-                                                        <input type="text" class="form-control" id="descripcionpro"
-                                                            name="descripcionpro" placeholder="Descripción"
+                                                        <label for="preciopro">Precio normal</label>
+                                                        <input type="number" class="form-control" id="preciopro"
+                                                            name="preciopro" placeholder="Precio"
                                                             pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required
                                                             minlength="3" maxlength="50" autocomplete="off" />
                                                     </div>
                                                     <br>
                                                     <div class="form-group">
-                                                        <label for="preciolistapro">Precio lista</label>
-                                                        <input type="number" class="form-control" id="preciolistapro"
-                                                            name="preciolistapro" placeholder="Precio lista"
+                                                        <label for="preciodescuentopro">Precio con descuento</label>
+                                                        <input type="number" class="form-control" id="preciodescuentopro"
+                                                            name="preciodescuentopro" placeholder="Precio con descuento"
                                                            required
                                                             autocomplete="off" />
                                                     </div>
                                                     <br>
                                                     <div class="form-group">
-                                                        <label for="preciolistapro">Precio con IVA</label>
-                                                        <input type="number" class="form-control" id="preciolistaproiva"
-                                                            name="preciolistaproiva" placeholder="Precio lista + IVA"
+                                                        <label for="cantidadpro">Cantidad</label>
+                                                        <input type="number" class="form-control" id="cantidadpro"
+                                                            name="cantidadpro" placeholder="Cantidad"
+                                                        required
+                                                            autocomplete="off" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="imagenpro">Imagen</label>
+                                                        <input type="number" class="form-control" id="imagenpro"
+                                                            name="imagenpro" placeholder="Imagen"
                                                         required
                                                             autocomplete="off" />
                                                     </div>
                                                     <br>
                                                     <div class="form-group">
-                                                        <label for="subgrupopro">Subgrupo</label>
-                                                        <select id="subgrupopro" class="form-select" name="subgrupopro">
+                                                        <label for="categoriapro">Categoria</label>
+                                                        <select id="categoriapro" class="form-select" name="categoriapro">
                                                             <option selected></option>
                                                         </select>
                                                     </div>
@@ -147,48 +154,59 @@ Dashboard_Page::headerTemplate('Productos');
                         </div>
                         <div class="modal-body">
                             <form id="update-form" method="post" enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <label for="servicioacpro">Servicio</label>
-                                    <input type="text" class="form-control" id="servicioacpro" name="servicioacpro"
-                                        placeholder="Servicio" 
-                                        pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required
-                                        maxlength="1" autocomplete="off" />
-                                </div>
-                                <br>
+                            <div class="form-group">
+                                                        <label for="serviciopro">Nombre</label>
+                                                        <input type="text" class="form-control" id="serviciopro"
+                                                            name="nombrepro" placeholder="Nombre producto"
+                                                            pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required
+                                                            maxlength="1" autocomplete="off" />
+                                                    </div>
+                                                    <br>
                                                     <div class="form-group">
-                                                        <label for="codigoproac">Codigo</label>
-                                                        <input type="text" class="form-control" id="codigoproac"
-                                                            name="codigoproac" placeholder="Codigo"
+                                                        <label for="descripcionpro">Descripcion</label>
+                                                        <input type="text" class="form-control" id="descripcionpro"
+                                                            name="descripcionpro" placeholder="Descripcion"
                                                             required
                                                             minlength="3" maxlength="50" autocomplete="off" />
                                                     </div>
                                                     <br>
-                                <div class="form-group">
-                                    <label for="descripcionacpro">Descripcion</label>
-                                    <input type="text" class="form-control" id="descripcionacpro" name="descripcionacpro"
-                                        placeholder="Descripcion" required minlength="2" maxlength="100" autocomplete="off" />
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <label for="preciolistaact">Precio</label>
-                                    <input type="number" class="form-control" id="preciolistaact" name="preciolistaact"
-                                       autocomplete="off"  />
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <label for="preciolistaivaac">Precio con IVA</label>
-                                    <input type="number" class="form-control" id="preciolistaivaac" name="preciolistaivaac"
-                                       autocomplete="off" />
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <label for="subgrupoac">Subgrupo</label>
-                                    <select id="subgrupoac" class="form-select" name="subgrupoac">
-                                        <option selected></option>
-                                    </select>
-                                </div>
-                                <br>
-                        </div>
+                                                    <div class="form-group">
+                                                        <label for="preciopro">Precio normal</label>
+                                                        <input type="number" class="form-control" id="preciopro"
+                                                            name="preciopro" placeholder="Precio"
+                                                            pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]{1,50}" required
+                                                            minlength="3" maxlength="50" autocomplete="off" />
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+                                                        <label for="preciodescuentopro">Precio con descuento</label>
+                                                        <input type="number" class="form-control" id="preciodescuentopro"
+                                                            name="preciodescuentopro" placeholder="Precio con descuento"
+                                                           required
+                                                            autocomplete="off" />
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+                                                        <label for="cantidadpro">Cantidad</label>
+                                                        <input type="number" class="form-control" id="cantidadpro"
+                                                            name="cantidadpro" placeholder="Cantidad"
+                                                        required
+                                                            autocomplete="off" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="imagenpro">Imagen</label>
+                                                        <input type="number" class="form-control" id="imagenpro"
+                                                            name="imagenpro" placeholder="Imagen"
+                                                        required
+                                                            autocomplete="off" />
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group">
+                                                        <label for="categoriapro">Categoria</label>
+                                                        <select id="categoriapro" class="form-select" name="categoriapro">
+                                                            <option selected></option>
+                                                        </select>
+                                                    </div>
                         <br>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
