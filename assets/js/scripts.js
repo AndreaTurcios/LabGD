@@ -45,7 +45,7 @@ $(document).ready(function () {
         mostrar();
     })
     $('#btnCarrito').click(function(e){
-        $('#btnCarrito').attr('href','https://web.whatsapp.com/');
+        $('#btnCarrito').attr('href','https://wa.me/50322614705?text=Hola%20me%20encuentro%20interesado%20en%20contactar%20por%20un%20servicio');
     })
     $('#btnVaciar').click(function(){
         localStorage.removeItem("productos");
