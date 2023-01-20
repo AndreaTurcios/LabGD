@@ -1,0 +1,187 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    height: 115vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: url("../../resources/img/parallax/parallax-bg-2.jpg")
+}
+
+
+.book {
+    /* margin-top: 25px;
+    margin-bottom: 25px; */
+    /*
+    margin-right: 50px;
+    margin-left: 25px; */
+    position: relative;
+    width: 650px;
+    height: 710px;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+} 
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden; 
+    border-left: 3px solid black;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    position: flex;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 85px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 21;
+}
+
+#p2 {
+    z-index: 20;
+}
+
+#p3 {
+    z-index: 19;
+}
+
+#p4 {
+    z-index: 18;
+}
+
+#p5 {
+    z-index: 17;
+}
+
+#p6 {
+    z-index: 16;
+}
+
+#p7 {
+    z-index: 15;
+}
+
+#p8 {
+    z-index: 14;
+}
+
+#p9 {
+    z-index: 13;
+}
+
+#p10 {
+    z-index: 12;
+}
+
+#p11 {
+    z-index: 11;
+}
+
+#p12 {
+    z-index: 10;
+}
+
+#p13 {
+    z-index: 9;
+}
+
+#p14 {
+    z-index: 8;
+}
+
+#p15 {
+    z-index: 7;
+}
+
+#p16 {
+    z-index: 6;
+}
+
+#p17 {
+    z-index: 5;
+}
+
+#p18 {
+    z-index: 4;
+}
+
+#p19 {
+    z-index: 3;
+}
+
+#p20 {
+    z-index: 2;
+}
+
+#p21 {
+    z-index: 1;
+}
+

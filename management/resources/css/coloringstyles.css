@@ -1,0 +1,263 @@
+/* * {
+    background-color: grey;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  #game {
+    width: 99vw;
+    height: 98vh;
+    margin: 5px auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .left-panel {
+    width: 20%;
+    height: 100%;
+    padding: 2px;
+  }
+  .color-grid {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+  }
+  .color-box {
+    border: 1px solid black;
+  }
+  
+  .span3 {
+    grid-column: span 3;
+    border: none;
+    background: none;
+  }
+  
+  #clear {
+    text-align: center;
+    text-decoration: none;
+    /* background-color: transparent; */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    font-size: 2rem;
+  }
+  
+  .right-panel {
+    width: 79.5%;
+    height: 100%;
+    padding: 2px;
+  }
+  
+  .canvas-grid {
+    display: grid;
+    grid-template-rows: repeat(80, 1fr);
+    grid-template-columns: repeat(160, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+  .canvas-box {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-collapse: collapse;
+  }
+
+  /*
+  *Libro 4
+  **/
+
+  .box-act8{
+    height: 30px ;
+    width: 105px; 
+    background-color: rgb(255, 252, 230); 
+    border-radius: 5px; 
+    border: 1px solid #dbdbdb
+  }
+
+  .container-act8 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ECF7F9;
+    border-radius: 20px;
+  }
+
+  .cell-act21{
+    border: 2px solid gray;
+    color: #212526;
+  }
+
+  .box-act23{
+    height: 30px;
+    width: 50px !important; 
+    background-color: rgb(230, 252, 255); 
+    border-radius: 5px; 
+    border: 1px solid #dbdbdb
+  }
+
+  .container-act2 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ECF7F9;
+    border-bottom: solid 1px #ccd7d8;
+  }
+
+  .title-act3{
+    background-color: #feec96;
+    color: #eb3a4a;
+    font-weight: bold;
+    text-align: center;
+    border: solid 1px #ccd7d8;
+  }
+
+  .box-act2{
+    background-color: #fef5e2;
+    border-left: solid 1px #ccd7d8;
+    border-right: solid 1px #ccd7d8;
+  }
+
+  .th-act8{
+    background-color: #dee59c !important;
+    text-align: center;
+  }
+
+  .box-act8-u2{
+    background-color: #deefce !important;
+  }
+
+  .text-option-act8{
+    color: #d83090;
+  }
+
+  .container-act16{
+    background-color: #faf9dc;
+    border: 1px solid#f39e6b;
+    border-radius: 10px;
+  }
+
+  .time-b4{
+    border: solid 1px #ced4da; 
+    border-radius: 0.25rem;
+    width: 25%
+  }
+
+  /*
+  *Libro 5
+  **/
+  
+  .flex-container-5 {
+    display: flex;
+    margin-bottom: 5px ;
+  }
+  
+  .flex-container-5 .num{
+    width: 10px; 
+    padding-right: 20px
+  }
+
+  .flex-container-5 .req{
+    width: 85%;
+  }
+
+  .flex-container-5 .req input{
+    width: 100%;
+  } 
+
+  .box-select-5{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .box-select-5 div{
+    padding: 20px !important;
+  }
+
+   /*
+  *Libro 6
+  **/
+
+  .libro6-contenedor {
+    width: 100px;
+    height: 25px;
+    border: 1px solid black;
+    padding: 0px;
+    margin: -1px;
+    text-align: center;
+    background-color: #b6c5c8;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .libro6-hijo {
+    margin: 0px;
+  }
+
+  .libro6-padre {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    background-color: #ECF7F9;
+    border-radius: 20px;
+  }
+
+  .libro6-padre .libro6-hijo {
+    margin: 10px;
+  }
+
+  .libro6-padre2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    background-color: #ECF7F9;
+    border-radius: 20px;
+  }
+
+  .libro6-padre2 .libro6-hijo2 {
+    margin: 10px;
+  }
+
+  .libro6-padre .libro6-hijo2 {
+    margin: -1px;
+  }
+
+  .libro6-placeholder {
+    width: 100px;
+    height: 25px;
+    transition: 1s;
+    margin: -1px;
+  }
+
+  .libro6-placeholder.hover {
+    background-color: orange;
+  }
+
+  /*
+  Libro 8
+  **/
+
+  .box-l8u5 {
+    height: 30px;
+    width: 100px; 
+    background-color: rgb(255, 252, 230); 
+    border-radius: 5px; 
+    border: 1px solid #dbdbdb
+  }
+
+  .box-l8u5-2 {
+    height: 30px;
+    width: 110px; 
+    background-color: rgb(255, 252, 230); 
+    border-radius: 5px; 
+    border: 1px solid #dbdbdb
+  }

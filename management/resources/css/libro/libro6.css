@@ -1,0 +1,198 @@
+.crucigrama-juego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.crucigrama-palabras {
+    margin-top: 10px;
+}
+
+.crucigrama-color-pag36{
+    background-color: #E6ECEC;
+    border: none !important;
+}
+
+.crucigrama-color-pag36 button{
+    background-color: #E6ECEC;
+    color: #3F3D3F ;
+}
+
+.crucigrama-pag36 input{
+    background-color: #E6ECEC;
+    color: #3F3D3F;
+}
+
+/* .crucigrama-palabras ul{
+    column-count: 2;
+}
+*/
+.crucigrama-palabras input {
+    
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    margin: 5px;
+    text-transform: capitalize;
+}
+
+
+
+.crucigrama-palabras li {
+    list-style: none;
+    font-size: 12px;
+}
+
+
+.libro6-indicaciones{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#puzzle-36{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 3vw;
+  }
+  
+  #puzzle-36 > div { /* rows */
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media only screen and (min-width: 600px) {
+    #puzzle-36 {
+      float: left;
+      padding: 1rem;
+    }
+  }
+
+  /* indicates when a square has been selected */
+#puzzle-36 .selected {
+    background-color: orange;
+  }
+  
+  /* indicates that the square is part of a word that has been found */ 
+  #puzzle-36 .found {
+    background-color: blue;
+    color: white;
+  }
+  
+  #puzzle-36 .solved {
+    background-color: purple;
+    color: white;
+  }
+  
+  /* indicates that all words have been found */
+  #puzzle-36 .complete {
+    background-color: green;
+  }
+
+  /* Pagina 72**/
+  .crucigrama-color-pag72{
+    background-color: #E6ECEC;
+    border: none !important;
+}
+
+.crucigrama-color-pag72 button{
+    background-color: #E6ECEC;
+    color: #3F3D3F ;
+}
+
+.crucigrama-pag72 input{
+    background-color: #E6ECEC;
+    color: #3F3D3F;
+}
+
+/* Pagina 91**/
+.crucigrama-color-pag91{
+  background-color: #75C7C8;
+  border: none !important;
+}
+
+.crucigrama-color-pag91 button{
+  background-color: #75C7C8;
+  color: white ;
+}
+
+.crucigrama-pag91 input{
+  background-color: #75C7C8;
+  color: white;
+}
+
+/* Page 109**/
+.crucigrama-color-pag109{
+  background-color: #AD61FC;
+  border: none !important;
+}
+
+.crucigrama-color-pag109 button{
+  background-color: #AD61FC;
+  color: white ;
+}
+
+.crucigrama-pag109 input{
+  background-color: #AD61FC;
+  color: white;
+}
+
+/*PAGINA 15 - 16*/
+/*****************************************/
+/*****************************************/
+/*****************************************/
+
+  .flex-container-img {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    margin-bottom: 5px ;
+  }
+  
+  .flex-container-img .num{
+    width: 10px; 
+    padding-right: 20px
+  }
+
+  .flex-container-img .req{
+    width: 100%;
+  }
+
+  .flex-container-img .req input{
+    width: 100%;
+  } 
+
+  /**PAGINA 18*/
+  /*****************************************/
+  /*****************************************/
+  /*****************************************/
+  .naranja {
+    background-color: #F68189;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .color-6887C5{
+    background-color: #6887C5 ;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .none-color{
+    background: none !important;
+    border:none !important;
+  }
+
+  /**PAGINA 28*/
+  /*****************************************/
+  /*****************************************/
+  /*****************************************/
+  .table-28,
+  .table-28 tr,
+  .table-28 tb{
+    border: none;
+    padding: 5px;
+    margin: 2px;
+  }

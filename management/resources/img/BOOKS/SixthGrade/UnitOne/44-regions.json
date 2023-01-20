@@ -1,0 +1,39 @@
+[{
+	"x":152,
+	"y":120,
+	"width":130,
+	"height":12,
+	"class":"html",
+	"data":
+		{
+			"modal":"ModalLibroSeis35",
+			"form":"game-35"
+		}
+}
+,
+{
+	"x":152,
+	"y":315,
+	"width":130,
+	"height":12,
+	"class":"html",
+	"data":
+		{
+			"modal":"ModalLibroSeis35-2",
+			"form":"game-35-e2"
+		}
+}
+,
+{
+	"x":152,
+	"y":568,
+	"width":130,
+	"height":12,
+	"class":"html",
+	"data":
+		{
+			"modal":"ModalLibroSeis35-3",
+			"form":"game-35-e3"
+		}
+}
+]

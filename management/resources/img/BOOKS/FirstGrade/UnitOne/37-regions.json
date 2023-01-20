@@ -1,0 +1,28 @@
+[{
+	"x":152,
+	"y":568,	
+	"width":130,
+	"height":12,
+	"class":"html",
+	"data":
+		{
+			"modal":"ModalLibroTreintayseis",
+			"form":"game-thirtysix"
+		}	
+}
+,
+{
+	"x":285,
+	"y":125,
+	"width":130,
+	"height":12,
+	"class":"html",
+	"data":
+		{
+
+			"modal":"ModalLibroUnoAudioPag30",
+			"form":"audio30"
+			
+		}
+}
+]

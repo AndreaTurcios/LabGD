@@ -77,6 +77,7 @@ body {
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
+  background: #09099e;
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -11356,4 +11357,12 @@ textarea.form-control-lg {
 
 .btc{
   z-index: 999;
+}
+
+.container-fluid{
+  background: transparent;
+}
+
+.tr{
+  background: transparent;
 }
