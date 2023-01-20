@@ -52,12 +52,6 @@ class Dashboard_Page
                                 <ul class="navbar-nav  ">
                                   <!-- Opciones -->
                                   <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="invgrupos.php">GRUPOS</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="invsubgrupos.php">SUBGRUPOS</a>
-                                  </li>
-                                  <li class="nav-item">
                                     <a class="nav-link" href="invproductos.php">PRODUCTOS</a>
                                   </li>
                                 </ul>
@@ -66,12 +60,6 @@ class Dashboard_Page
                               <!-- Navbar Normal -->
                             <div class="col-12 d-none d-lg-block MenuSec">
                               <ul class="nav justify-content-center">
-                                <li class="nav-item p-1">
-                                  <button type="button" class="btn botonAnim"><i class="fas fa-user"></i><a href="invgrupos.php" id="fontmen"> GRUPOS</a></button> 
-                                </li>
-                                <li class="nav-item p-1">
-                                  <button type="button" class="btn botonAnim"><i class="fas fa-shopping-basket"></i><a href="invsubgrupos.php" id="fontmen"> SUBGRUPOS</a></button> 
-                                </li>
                                 <li class="nav-item p-1">
                                   <button type="button" class="btn botonAnim"><i class="fas fa-truck-moving"></i><a href="invproductos.php" id="fontmen"> PRODUCTOS</a></button>
                                 </li>
