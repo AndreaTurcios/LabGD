@@ -17,7 +17,7 @@ function fillTable(dataset) {
                 <td>${row.precio_normal}</td>
                 <td>${row.precio_rebajado}</td>
                 <td>${row.cantidad}</td>
-                <td>${row.imagen}</td>
+                <td><img src="../../../assets/img/${row.imagen}" class="materialboxed" height="100"></td>
                 <td>${row.categoria}</td>
                 <td>
                 <a href="#" onclick="openUpdateDialog(${row.id})" class="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</a>/
