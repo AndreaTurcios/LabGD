@@ -247,7 +247,7 @@
                         <div class="single-cta">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="cta-text">
-                                <h4>Direccion</h4>
+                                <h4>Dirección</h4>
                                 <span>San Salvador</span>
                             </div>
                         </div>
@@ -256,7 +256,7 @@
                         <div class="single-cta">
                             <i class="fas fa-phone"></i>
                             <div class="cta-text">
-                                <h4>Llamanos</h4>
+                                <h4>Llámanos</h4>
                                 <span>7000 0000</span>
                             </div>
                         </div>
@@ -265,7 +265,7 @@
                         <div class="single-cta">
                             <i class="far fa-envelope-open"></i>
                             <div class="cta-text">
-                                <h4>Escribenos</h4>
+                                <h4>Escríbenos</h4>
                                 <span>mail@laptopsgyd.com</span>
                             </div>
                         </div>
@@ -299,15 +299,17 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                         <div class="footer-widget">
                             <div class="footer-widget-heading">
-                                <h3>Subscribe</h3>
+                                <h3>Suscríbete</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                <p>¿Deseas contactarnos? Envíanos tu correo y te contactaremos.</p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                <form action="https://formsubmit.co/programmer@andreaaturcios.com" method="POST">
+                                    <input type="text" name="correo" placeholder="Correo" required>
+                                        <button type="submit">
+                                        <p>Send</p>
+                                        </button>
                                 </form>
                             </div>
                         </div>
