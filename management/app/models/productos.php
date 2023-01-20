@@ -119,12 +119,48 @@ class Productos extends Validator
 
     public function readAll()
     {
-        $sql = 'SELECT id, nombre, descripcion, precio_normal, precio_rebajado, cantidad, imagen, id_categoria from productos
-        ORDER BY id desc ';
+        $sql = 'SELECT pro.id as id, pro.nombre as nombre,  pro.descripcion as descripcion, 
+        pro.precio_normal as precio_normal, pro.precio_rebajado as precio_rebajado, 
+        pro.cantidad as cantidad, pro.imagen as imagen, cat.categoria as categoria
+        FROM productos pro
+        inner join categorias cat ON cat.id  = pro.id_categoria 
+        ORDER BY id desc';
         $params = null;
         return Database::getRows($sql, $params);
     }
 
+    public function updateRow()
+    {
+        $sql = 'UPDATE invproductos 
+        SET subgrupoid = ?, productoservicio = ?, codigo = ?, descripcion = ?, 
+        preciolista = ?, preciolistaconiva = ? , habilitado = 1
+        WHERE productoid = ?';
+        $params = array($this->subgrupoid, $this->productoservicio, $this->codigo, $this->descripcion, $this->preciolista, $this->preciolistaconiva, $this->productoid);
+        return Database::executeRow($sql, $params);
+    }
+
+    public function createRow()
+    {
+        $sql = 'INSERT INTO invproductos(productoid, subgrupoid, productoservicio, codigo, descripcion,preciolista, preciolistaconiva,habilitado)  
+        values (lastIdProducto(),?,?,?,?,?,?,1)';
+        $params = array($this->subgrupoid, $this->productoservicio, $this->codigo, $this->descripcion, $this->preciolista, $this->preciolistaconiva);
+        return Database::executeRow($sql, $params);
+    }
+
+    public function deleteRow()
+    {
+        $sql = 'DELETE FROM invproductos
+                WHERE productoid = ?';
+        $params = array($this->productoid);
+        return Database::executeRow($sql, $params);
+    }
+
+    public function readOne()
+    {
+        $sql = 'SELECT productoid, subgrupoid, productoservicio, codigo, descripcion,preciolista, preciolistaconiva
+        FROM invproductos
+        WHERE productoid = ?';
+        $params = array($this->productoid);
+        return Database::getRow($sql, $params);
+    }
 }
-
-

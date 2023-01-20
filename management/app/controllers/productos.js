@@ -1,114 +1,90 @@
-// Constante para establecer la ruta y parámetros de comunicación con la API.
-const API_LIBROS = '../../app/api/productos.php?action=';
-const ENDPOINT_ASIGNATURA = '../../app/api/asignatura.php?action=readAll';
-const ENDPOINT_ESTADO_LIBRO = '../../app/api/estado_libro.php?action=readAll';
-
+const API_PRODUCTOS = '../../app/api/productos.php?action=';
+const ENDPOINT_SUBGRUPO = '../../app/api/subgrupo.php?action=readSubgrupo';
 document.addEventListener('DOMContentLoaded', function () {
-    fillSelect(ENDPOINT_ASIGNATURA,'asignatura',null)
-    fillSelect(ENDPOINT_ESTADO_LIBRO,'estadolibro',null)
-    readRows(API_LIBROS);
-});
-function fillTable(dataset) { 
+    fillSelect(ENDPOINT_SUBGRUPO,'subgrupopro', null);
+    fillSelect(ENDPOINT_SUBGRUPO,'subgrupoac', null);
+    readRows(API_PRODUCTOS);
+}); 
+
+function fillTable(dataset) {
     let content = '';
-    // Se recorre el conjunto de registros (dataset) fila por fila a través del objeto row.
-    dataset.map(function (row) {  
-        
-        // Se crean y concatenan las filas de la tabla con los datos de cada registro. 
-        content += ` 
-            <tr>       
+    dataset.map(function (row) {
+        content += `
+            <tr>
                 <td>${row.id}</td>
-                <td>${row.nombre}</td> 
+                <td>${row.nombre}</td>
                 <td>${row.descripcion}</td>
-                <td>${row.precio_normal}</td>  
-                <td>${row.precio_rebajado}</td>  
-                <td>${row.cantidad}</td> 
-                <td>${row.imagen}</td> 
-                <td>${row.id_categoria}</td> 
+                <td>${row.precio_normal}</td>
+                <td>${row.precio_rebajado}</td>
+                <td>${row.cantidad}</td>
+                <td>${row.imagen}</td>
+                <td>${row.categoria}</td>
                 <td>
-                    <a href="#" onclick="openUpdateDialog(${row.id_libro})"class="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</a> /
-                    <a href="#" onclick="openDeleteDialog(${row.id_libro})"class="btn">Eliminar</a>
+                <a href="#" onclick="openUpdateDialog(${row.id})" class="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</a>/
+                <a href="#" onclick="openDeleteDialog(${row.id})" class="btn waves-effect red tooltipped" data-tooltip="Eliminar">Eliminar</a>
                 </td>
             </tr>
         `;
     });
-    // Se agregan las filas al cuerpo de la tabla mediante su id para mostrar los registros.
-    document.getElementById('tbody-rows').innerHTML = content;
-
-        // Se inicializa la tabla con DataTable.
+ document.getElementById('tbody-rows').innerHTML = content;
  let dataTable = new DataTable('#data-table', {
     labels: {
-
         placeholder: 'Buscar productos...',
-        perPage: '{select} Productos por página',
+        perPage: '{select} productos por página',
         noRows: 'No se encontraron productos',
-        info:'Mostrando {start} a {end} de {rows} productos',
-        style: "black"
+        info:'Mostrando {start} a {end} de {rows} productos'
     }
-
 });
 }
-// Método manejador de eventos que se ejecuta cuando se envía el formulario de buscar.
-document.getElementById('search-form').addEventListener('submit', function (event) {
-    // Se evita recargar la página web después de enviar el formulario.
-    event.preventDefault();
-    // Se llama a la función que realiza la búsqueda. Se encuentra en el archivo components.js
-    searchRows(API_LIBROS, 'search-form');
-});
 
-
-// Método manejador de eventos que se ejecuta cuando se envía el formulario de guardar.
-document.getElementById('save-form').addEventListener('submit', function (event) {
-    // Se evita recargar la página web después de enviar el formulario.
-    event.preventDefault();
-    saveRow(API_LIBROS, 'create', 'save-form', null);
-    document.getElementById('save-form').reset();
-});
-
-
-// Función para preparar el formulario al momento de modificar un registro.
 function openUpdateDialog(id) {
-    // Se restauran los elementos del formulario.
     document.getElementById('update-form').reset();
     const data = new FormData();
-    data.append('id_libro', id);
-    fetch(API_LIBROS + 'readOne', {
+    data.append('productoid', id);
+    fetch(API_PRODUCTOS + 'readOne', {
         method: 'post',
         body: data
     }).then(function (request) {
-        // Se verifica si la petición es correcta, de lo contrario se muestra un mensaje indicando el problema.
         if (request.ok) {
             request.json().then(function (response) {
-                // Se comprueba si la respuesta es satisfactoria, de lo contrario se muestra un mensaje con la excepción.
-                if (response.status) {        
-                document.getElementById('id_libro2').value = response.dataset.id_libro;
-                document.getElementById('nombrelibro2').value = response.dataset.nombre_libro;
-                document.getElementById('numpaginas2').value = response.dataset.numero_paginas;
-                fillSelect(ENDPOINT_ESTADO_LIBRO,'estadolibro2',value = response.dataset.id_estado_libro);
-                fillSelect(ENDPOINT_ASIGNATURA,'asignatura2',value = response.dataset.id_asignatura);
-            } else {
-                sweetAlert(2, response.exception, null);
-            }
-        });
-    } else {
-        console.log(request.status + ' ' + request.statusText);
-    }
-}).catch(function (error) {
-    console.log(error);
-});
+                if (response.status) {
+                    document.getElementById('productoidac').value = response.dataset.productoid;
+                    document.getElementById('servicioacpro').value = response.dataset.productoservicio;
+                    document.getElementById('codigoproac').value = response.dataset.codigo;
+                    document.getElementById('descripcionacpro').value = response.dataset.descripcion;
+
+                    const prec=Math.round (response.dataset.preciolista)
+                    const precli=Math.round (response.dataset.preciolistaconiva)
+                    document.getElementById('preciolistaact').value = prec;
+                    document.getElementById('preciolistaivaac').value = precli;
+
+                    document.getElementById('subgrupoac').value = response.dataset.subgrupoid;      
+                } else {
+                    sweetAlert(2, response.exception, null);
+                }
+            });
+        } else {
+            console.log(request.status + ' ' + request.statusText);
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
 }
 
-// Se agarra el elemento en base al id y se realiza un update, en el proceso se coloca el event.preventdefault para evitar que recargue la página
-document.getElementById('update-form').addEventListener('submit', function (event) {
-    // Se evita recargar la página web después de enviar el formulario.
+document.getElementById('save-form').addEventListener('submit', function (event) {
     event.preventDefault();
-    updateRow(API_LIBROS, 'update', 'update-form', 'update-modal');
+    saveRow(API_PRODUCTOS, 'create', 'save-form', 'save-modal');
+});
+
+document.getElementById('update-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    updateRow(API_PRODUCTOS, 'update','update-form','update-modal');
 });
 
 function openDeleteDialog(id) {
-    // Se define un objeto con los datos del registro seleccionado.
     const data = new FormData();
-    data.append('id_libro', id);
-    // Se confirma que se quiere eliminar un empleado en especifico en base al id
-    confirmDelete(API_LIBROS, data);
+    data.append('productoid', id);
+    confirmDelete(API_PRODUCTOS, data);
 }
+
 

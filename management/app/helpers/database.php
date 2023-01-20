@@ -7,11 +7,14 @@ class Database
     private static function connect()
     {
         // Credenciales para establecer la conexión con la base de datos.
-        $server = '20.168.54.79';
-        $database = 'itcainventario';   
-        $username = 'inventariousr';
-        $password = 'inventariousrpwd';
+        $server = 'localhost';
+        $database = 'card';   
+        $username = 'root';
+        $password = '';
+        // Se crea la conexión mediante la extensión PDO y el controlador
         self::$connection = new PDO('mysql:host='.$server.';dbname='.$database, $username, $password);
+        
+        //self::$conn = mysqli_connect($server, $username, $password, $database);
     }
 
     public static function executeRow($query, $values)
@@ -20,6 +23,7 @@ class Database
             self::connect();
             self::$statement = self::$connection->prepare($query);
             $state = self::$statement->execute($values);
+            // Se anula la conexión con el servidor de base de datos.
             self::$connection = null;            
             return $state;
         } catch (PDOException $error) {

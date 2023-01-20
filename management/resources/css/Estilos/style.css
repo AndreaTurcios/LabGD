@@ -281,7 +281,7 @@ a:hover{
     color: black;
     font-size: 26px;
     font-family: sans-serif;
-    ;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -348,18 +348,11 @@ a {
     color: white;
 }
 
-/* TERMINA INDEX*/
-
-/*Gestion de Clientes*/
-
 #MuestraBTN .btn{
     background-color: #4BADB6;
     color: white;
 }
 
-#ContainerClientes{
-    min-height: 620px;
-}
 
 /*Perfil CSS*/
 
