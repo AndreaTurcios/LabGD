@@ -17,7 +17,7 @@ class Dashboard_Page
             <link rel="stylesheet" href="resources/css/style.css">
             <link rel="stylesheet" href="resources/css/vanilla-dataTables.min.css">
             <title>LaptopsG&D - ' . $title . '</title>
-            <link rel="shortcut icon" href="resources/img/logosinai.png" type="image/x-icon">
+            <link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon">
         </head>
         <body>  
     ');
@@ -26,7 +26,7 @@ class Dashboard_Page
   <nav>
           <div class="menu">
               <ul>
-                   <li><a href="../management/control.php"><img src="resources/img/logo_sinai.png" width="200" height="60" class="top-center"></a></li>
+                   <li><a href="../management/control.php"><img src="resources/img/favicon.ico" width="65" height="60" class="top-center"></a></li>
               </ul>
           </div>
       </nav>
@@ -78,7 +78,7 @@ class Dashboard_Page
         <script type="text/javascript">
           copyright = new Date();
           update = copyright.getFullYear();
-          document.write("Todos los derechos reservados " + "© 2022 - " + update + " " + "MonteSinai  | Developer"); 
+          document.write("Todos los derechos reservados " + "© 2022 - " + update + " " + "LaptopsG&D  | Developer"); 
         </script>
         <a href="https://github.com/AndreaTurcios">Andrea Turcios</a>
       </div>
