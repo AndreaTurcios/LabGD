@@ -38,10 +38,10 @@ function fillTable(dataset) {
  let dataTable = new DataTable('#data-table', {
     labels: {
 
-        placeholder: 'Buscar libros...',
-        perPage: '{select} Libros por página',
-        noRows: 'No se encontraron libros',
-        info:'Mostrando {start} a {end} de {rows} libros',
+        placeholder: 'Buscar productos...',
+        perPage: '{select} Productos por página',
+        noRows: 'No se encontraron productos',
+        info:'Mostrando {start} a {end} de {rows} productos',
         style: "black"
     }
 
