@@ -8,9 +8,10 @@ class Database
     {
         // Credenciales para establecer la conexión con la base de datos.
         $server = 'localhost';
-        $database = 'card';   
-        $username = 'root';
-        $password = '';
+        $database = 'u681437298_laptopsgyd';   
+        $username = 'u681437298_root';
+        $password = '326281121232619aAd1&';
+        
         // Se crea la conexión mediante la extensión PDO y el controlador
         self::$connection = new PDO('mysql:host='.$server.';dbname='.$database, $username, $password);
         
